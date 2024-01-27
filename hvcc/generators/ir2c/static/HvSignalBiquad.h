@@ -92,6 +92,8 @@ typedef struct SignalBiquad_k {
   float a2; // y[-2]
 } SignalBiquad_k;
 
+void sBiquad_k_updateCoefficients(SignalBiquad_k *const o);
+
 hv_size_t sBiquad_k_init(SignalBiquad_k *o, float x0, float x1, float x2, float y1, float y2);
 
 void sBiquad_k_onMessage(SignalBiquad_k *o, int letIn, const HvMessage *m);
